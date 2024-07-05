@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color: #FFD569;
+    --background-color: #2D2D2D;
+    --background-secondary-color: #383838;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: white;
+}
+
+h1, h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    font-weight: normal;
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-top: 15rem;
+}
+
+h2 {
+    display: block;
+    border-bottom: 2px solid var(--primary-color);
+    width: fit-content;
+}
+
+.header{
+    margin: 0 auto;
+}
+    
+.header span {
+    display: block;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    max-width: 1440px;
+}
+
+button {
+    width: 200px;
+    padding: 10px;
+    font-size: large;
+    background-color: var(--background-color);
+    border: var(--primary-color) solid 2px;
+    border-radius: 5px;
+    color: var(--primary-color);
+    margin-top: 5rem;
+    margin-bottom: 15rem;
+}
+
+p {
+    margin: 1em 10% 0;
+}
+
+.skills {
+    /* width: 80%; */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    
+}
+.skills-header {       
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+}
+.skill {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-secondary-color);
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.skill img {
+    width: auto;
+    height: 100px;
+    margin: 1rem;
+}
+
+.cv-container-wrapper{
+    background-color: var(--background-secondary-color);
+    width: 100%;
+    margin: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.cv-row {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 0.5fr 9.5fr;
+    margin-bottom: 2.5rem;
+}
+
+.cv-year {
+    position: relative;
+    margin: 0 2rem;
+    text-align: right;
+    font-size: 32px;
+    font-family: "DM Serif Display";
+}
+
+.circle {
+    position: relative;
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    box-shadow: 0 0 35px -1px var(--primary-color);
+    margin: 15px auto 0;
+}
+
+.circle::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left:49%;
+    width: 1px;
+    height: 90px;
+    background-color: white;
+}
+
+.cv-grid-two .cv-title{
+    padding-left: 2rem;
+    font-size: 32px;
+    font-family: "DM Serif Display";
+    
+}
+
+.portfolio-grid {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer {
+    position: relative;
+    background-color: var(--background-secondary-color);
+    border-top: var(--primary-color) solid 2px;
+    border-bottom: var(--primary-color) solid 2px;
+    margin: 12rem auto;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: -2px; /* Align with the top border */
+    left: 50%; /* Position where you want the mask effect */
+    width: 20%; /* Width of the masked area */
+    height: 2px; /* Match the border thickness */
+    background-color: var(--background-secondary-color); /* Match the background color to "mask" the border */
+    transform: translateX(-50%);
+}
+
+.footer h2 {
+    position: absolute;
+    border: none;
+    top: -5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer .footer-content {
+    width: 40%;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 5rem 0;    
+    justify-content: center; 
+    align-items: center; 
+}
+
+.footer-pill {
+    background-color: var(--background-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: var(--primary-color);
+}

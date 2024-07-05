@@ -1,0 +1,20 @@
+{
+    "menu": [
+        {
+            "name": "Home",
+            "url": "/"
+        },
+        {
+            "name": "Contact",
+            "url": "/contact"
+        },
+        {
+            "name": "Portfolio",
+            "url": "/portfolio"
+        },
+        {
+            "name": "About",
+            "url": "/about"
+        }
+    ]
+}
