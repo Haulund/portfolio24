@@ -123,7 +123,7 @@ p {
     background-color: var(--primary-color);
     border-radius: 50%;
     box-shadow: 0 0 35px -1px var(--primary-color);
-    margin: 15px auto 0;
+    margin: 10px auto 0;
 }
 
 .circle::after {

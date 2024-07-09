@@ -3,7 +3,6 @@
 // 2. change email
 // 3. change phone number
 // 4. placement of yellow dots in cv section
-// 5. smaller icons in skills section
 // 6. img of me in header
 // 7. add work with me button functionality
 // 8. add Linked / SOME ICONS
