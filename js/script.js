@@ -1,6 +1,6 @@
 console.log("Main script running");
 window.addEventListener("DOMContentLoaded", async () => {
-  const text = await fetch("../data/text.json")
+  const text = await fetch("https://haulund.github.io/portfolio24/data/text.json")
     .then((response) => response.json())
     .then((data) => {
       // Use the data here
@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", async () => {
       console.error("Error:", error);
     });
 
-  const skills = await fetch("../data/skills.json")
+  const skills = await fetch("https://haulund.github.io/portfolio24/data/skill.json")
     .then((response) => response.json())
     .then((data) => {
       // Use the data here
