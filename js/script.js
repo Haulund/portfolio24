@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   };
 
   // Make shift VanillaJS env variable
-  if (document.URL.startsWith("https://www")) {
+  if (document.URL.startsWith("https://haulund")) {
     env.ROOT_PATH = "https://haulund.github.io/portfolio24/"
   } 
 
