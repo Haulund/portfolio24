@@ -1,8 +1,6 @@
 // TODO:
 // 1. mobile friendly
-// 2. change email
-// 3. change phone number
-// 4. placement of yellow dots in cv section
+// 2. change email done -> create new email
 // 6. img of me in header
 // 7. add work with me button functionality
 // 8. add Linked / SOME ICONS
@@ -139,6 +137,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   PortfolioContainer.appendChild(PortfolioHeader);
   PortfolioContainer.appendChild(portfolioGrid);
   document.body.appendChild(PortfolioContainer);
+
   // ------------------
   // footer section
   // ------------------
@@ -146,25 +145,21 @@ window.addEventListener("DOMContentLoaded", async () => {
   const footerContent = document.createElement("div");
   const footerHeader = document.createElement("h2");
   const emailSpan = document.createElement("span");
-  const phoneSpan = document.createElement("span");
   const addressSpan = document.createElement("span");
 
   footerHeader.textContent = text.section[5].title;
   emailSpan.textContent = text.section[5].email;
-  phoneSpan.textContent = text.section[5].phone;
   addressSpan.textContent = text.section[5].address;
 
   footer.className = "footer";
   footerContent.className = "footer-content";
   footerHeader.className = "footer-header";
   emailSpan.className = "footer-pill";
-  phoneSpan.className = "footer-pill";
   addressSpan.className = "footer-pill";
 
   footer.appendChild(footerHeader);
   footer.appendChild(footerContent);
   footerContent.appendChild(emailSpan);
-  footerContent.appendChild(phoneSpan);
   footerContent.appendChild(addressSpan);
   document.body.appendChild(footer);
 
