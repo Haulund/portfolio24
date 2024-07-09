@@ -2,51 +2,51 @@
     "skills": [
         {
             "name": "HTML",
-            "img": "../img/html5-logo.svg"
+            "img": "img/html5-logo.svg"
         },
         {
             "name": "CSS",
-            "img": "/img/css3-logo.png"
+            "img": "img/css3-logo.png"
         },
         {
             "name": "JavaScript",
-            "img": "/img/javascript-logo.png"
+            "img": "img/javascript-logo.png"
         },
         {
             "name": "TypeScript",
-            "img": "/img/typescript-logo.svg"
+            "img": "img/typescript-logo.svg"
         },
         {
             "name": "React",
-            "img": "/img/react-logo.svg"
+            "img": "img/react-logo.svg"
         },
         {
             "name": "Vue",
-            "img": "/img/vuejs-logo.svg"
+            "img": "img/vuejs-logo.svg"
         },
         {
             "name": "Next.js",
-            "img": "/img/nextjs-logo.svg"
+            "img": "img/nextjs-logo.svg"
         },
         {
             "name": "Node.js",
-            "img": "/img/nodejs-logo.svg"
+            "img": "img/nodejs-logo.svg"
         },
         {
             "name": "GitHub",
-            "img": "/img/github-logo.svg"
+            "img": "img/github-logo.svg"
         },
         {
             "name": "Tailwind",
-            "img": "/img/tailwind-logo.svg"
+            "img": "img/tailwind-logo.svg"
         },
         {
             "name": "Docker",
-            "img": "/img/docker-logo.svg"
+            "img": "img/docker-logo.svg"
         },
         {
             "name": "Java",
-            "img": "/img/java-logo.svg"
+            "img": "img/java-logo.svg"
         }
     ]
 }
