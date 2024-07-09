@@ -1,10 +1,22 @@
 console.log("Main script running");
 window.addEventListener("DOMContentLoaded", async () => {
-  const text = await fetch("https://haulund.github.io/portfolio24/data/text.json")
+  const env = {
+    ROOT_PATH: "",
+  };
+
+  // Make shift VanillaJS env variable
+  if (document.URL.startsWith("http://localhost")) {
+    env.ROOT_PATH = "./"
+  } else if (document.URL.startsWith("https://www")) {
+    env.ROOT_PATH = "https://haulund.github.io/portfolio24/"
+  } else {
+    console.warn("wrong URL, could not set ROOT_PATH")
+  }
+
+  const text = await fetch(env.ROOT_PATH + "data/text.json")
     .then((response) => response.json())
     .then((data) => {
       // Use the data here
-      console.log(data);
       return data;
     })
     .catch((error) => {
@@ -12,19 +24,16 @@ window.addEventListener("DOMContentLoaded", async () => {
       console.error("Error:", error);
     });
 
-  const skills = await fetch("https://haulund.github.io/portfolio24/data/skill.json")
+  const skills = await fetch(env.ROOT_PATH + "data/skills.json")
     .then((response) => response.json())
     .then((data) => {
       // Use the data here
-      console.log(data);
       return data;
     })
     .catch((error) => {
       // Handle any errors
       console.error("Error:", error);
     });
-
-  const fakePortfolio = [];
 
   // ------------------
   //header section
