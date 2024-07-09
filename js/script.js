@@ -1,17 +1,13 @@
 console.log("Main script running");
 window.addEventListener("DOMContentLoaded", async () => {
   const env = {
-    ROOT_PATH: "",
+    ROOT_PATH: "./",
   };
 
   // Make shift VanillaJS env variable
-  if (document.URL.startsWith("http://localhost")) {
-    env.ROOT_PATH = "./"
-  } else if (document.URL.startsWith("https://www")) {
+  if (document.URL.startsWith("https://www")) {
     env.ROOT_PATH = "https://haulund.github.io/portfolio24/"
-  } else {
-    console.warn("wrong URL, could not set ROOT_PATH")
-  }
+  } 
 
   const text = await fetch(env.ROOT_PATH + "data/text.json")
     .then((response) => response.json())
@@ -230,7 +226,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     const image = document.createElement("img");
     const span = document.createElement("span");
     span.textContent = name;
-    image.src = imgPath;
+    image.src = env.ROOT_PATH + imgPath;
     image.alt = name;
     skillsElement.appendChild(image);
     skillsElement.appendChild(span);
