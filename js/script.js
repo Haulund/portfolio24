@@ -227,6 +227,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     const span = document.createElement("span");
     span.textContent = name;
     image.src = env.ROOT_PATH + imgPath;
+    console.log("img src: ", image.src);
     image.alt = name;
     skillsElement.appendChild(image);
     skillsElement.appendChild(span);
