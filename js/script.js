@@ -1,4 +1,13 @@
-console.log("Main script running");
+// TODO:
+// 1. mobile friendly
+// 2. change email
+// 3. change phone number
+// 4. placement of yellow dots in cv section
+// 5. smaller icons in skills section
+// 6. img of me in header
+// 7. add work with me button functionality
+// 8. add Linked / SOME ICONS
+
 window.addEventListener("DOMContentLoaded", async () => {
   const env = {
     ROOT_PATH: "./",
@@ -227,7 +236,6 @@ window.addEventListener("DOMContentLoaded", async () => {
     const span = document.createElement("span");
     span.textContent = name;
     image.src = env.ROOT_PATH + imgPath;
-    console.log("img src: ", image.src);
     image.alt = name;
     skillsElement.appendChild(image);
     skillsElement.appendChild(span);
