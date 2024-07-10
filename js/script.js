@@ -45,22 +45,38 @@ window.addEventListener("DOMContentLoaded", async () => {
   document.body.appendChild(div);
   const headerDiv = document.querySelector(".header");
 
+  // grid container for header section
+  const headerGrid = document.createElement("div");
+  headerGrid.className = "header-grid";
+  headerDiv.appendChild(headerGrid);
+
+  // section for h1, span and button
+  const headerSection = document.createElement("section");
+  headerSection.className = "header-section";
+  headerGrid.appendChild(headerSection);
+
   // ad h1 to header section
   const h1 = document.createElement("h1");
   h1.textContent = text.section[0].name;
-  headerDiv.appendChild(h1);
+  headerSection.appendChild(h1);
 
   // add span to header section
   const span = document.createElement("span");
   span.className = "sub-title";
   span.textContent = text.section[0].job;
-  headerDiv.appendChild(span);
+  headerSection.appendChild(span);
 
   // add button to header section
   const button = document.createElement("button");
   button.className = "btn";
   button.textContent = text.section[3].text;
-  headerDiv.appendChild(button);
+  headerSection.appendChild(button);
+
+  const img = document.createElement("img");
+  img.className = "portrait";
+  img.src = env.ROOT_PATH + "img/me.png";
+  img.alt = "Steffen Haulund - Web Developer";
+  headerGrid.appendChild(img);
 
   // add about me text to header section
   const h2 = document.createElement("h2");
