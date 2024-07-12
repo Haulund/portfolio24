@@ -66,11 +66,13 @@ h2 {
     transform: scaleX(-1);
     position: absolute;
     top: 0;
+    right: 0;
     z-index: -1;
     opacity: 0.75;
 }
 
 .header-grid{
+    position: relative;
     width: 100%;
 }
 
@@ -88,6 +90,11 @@ button {
     border: var(--primary-color) solid 2px;
     border-radius: 5px;
     color: var(--primary-color);
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
 }
 
 p {
@@ -201,18 +208,20 @@ p {
 .footer::before {
     content: '';
     position: absolute;
-    top: -2px; /* Align with the top border */
-    left: 50%; /* Position where you want the mask effect */
-    width: 20%; /* Width of the masked area */
-    height: 2px; /* Match the border thickness */
-    background-color: var(--background-secondary-color); /* Match the background color to "mask" the border */
+    top: -2px;
+    left: 50%; 
+    width: 150px; 
+    height: 2px; 
+    background-color: var(--background-secondary-color);
     transform: translateX(-50%);
 }
 
 .footer h2 {
     position: absolute;
     border: none;
-    top: -5px;
+    font-size: 20px;
+    margin-top: 0;
+    top: -3px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -245,9 +254,7 @@ p {
         width: 90%;
     }
     
-    .portrait {
-        right: 10%;
-    }
+
 
     .skills {
         grid-template-columns: 1fr 1fr 1fr;
@@ -278,7 +285,6 @@ p {
     }
 
     .portrait {
-        right: 10%;
         height: 600px;
     }
 
@@ -312,9 +318,19 @@ p {
         font-size: 70px;
     }
     .portrait {
-        right: 25%;
         height: 800px;
     }
+    /* .portrait {
+        width: auto;
+        height: 490px;
+        filter: grayscale(100%);
+        margin: auto;
+        transform: scaleX(-1);
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        opacity: 0.75;
+    } */
 
     .header-section {
         height: 800px;
@@ -334,4 +350,12 @@ p {
         top: 50px;
     }
 
+    .footer::before {
+        width: 250px; 
+        height: 5px; 
+    }
+
+    .footer h2 {
+        font-size: var(--cv-header-font-size);
+    }
 }
