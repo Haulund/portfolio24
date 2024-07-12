@@ -3,7 +3,7 @@
 // 2. change email done -> create new email
 // 7. add work with me button functionality
 // 8. add Linked / SOME ICONS
-// 9. resizing text issues
+
 
 window.addEventListener("DOMContentLoaded", async () => {
   const env = {
@@ -70,6 +70,9 @@ window.addEventListener("DOMContentLoaded", async () => {
   const button = document.createElement("button");
   button.className = "btn";
   button.textContent = text.section[3].text;
+  button.addEventListener("click", () => {
+    window.location.href = "mailto:steffen.haulund@gmail.com";
+  });
   headerSection.appendChild(button);
 
   const img = document.createElement("img");

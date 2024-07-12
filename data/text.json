@@ -52,7 +52,7 @@
                     "year": "2017"
                 },
                 {
-                    "title": "TEACHER | GØRLEV IDRÆTS EFTER SKOLE",
+                    "title": "TEACHER | GØRLEV IDRÆTSEFTERSKOLE",
                     "points": [
                         "Fysical education",
                         "Youth Mentor",
@@ -68,12 +68,12 @@
         },
         {
             "section": "portfolio",
-            "title": "Portfolio"
+            "title": "Portfolio  - (work in progress)  "
         },
         {
             "section": "footer",
             "title": "Contact Me",
-            "email": "haulund.dev@gmail.com",
+            "email": "steffen.haulund@gmail.com",
             "address": "North Zealand, Denmark"
         }
     ]
