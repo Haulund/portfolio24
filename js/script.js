@@ -1,9 +1,9 @@
 // TODO:
-// 1. mobile friendly
+// 1. change gørlec idræts efterosklole text i text.json
 // 2. change email done -> create new email
-// 6. img of me in header
 // 7. add work with me button functionality
 // 8. add Linked / SOME ICONS
+// 9. resizing text issues
 
 window.addEventListener("DOMContentLoaded", async () => {
   const env = {
