@@ -135,6 +135,12 @@ p {
     border-radius: 5px;
 }
 
+.skill:hover {
+    box-shadow: #FFD569 0 0 10px;
+    transform: scale(1.10);
+    transition: all 0.5s;
+}
+
 .skill img {
     width: auto;
     height: 50px;
