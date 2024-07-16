@@ -1,0 +1,80 @@
+{
+    "pagetitle": "Portfolio | Steffen Haulund",
+    "section": [
+        {
+            "section": "header",
+            "name": "Steffen Haulund",
+            "job": "Web Udvikler",
+            "aboutMe": "Om mig",
+            "aboutMeText": "Med min passion for webudvikling stræber jeg efter at skabe web-løsninger, der passer perfekt til brugernes behov. Brugervenlighed og æstetisk appel er vigtige for mig. Min erfaring spænder fra udvikling af websteder for lokale butikker til opbygning af virksomhedsniveau SaaS-applikationer. Jeg trives med ansvar og elsker at se mit arbejde løfte kundens eller brugerens projekt."
+        },
+        {
+            "section": "skills",
+            "title": "Færdigheder"
+        },
+        {
+            "title": "CV",
+            "posts": [
+                {
+                    "title": "IGANGVÆRENDE KONSULENT | TCS",
+                    "points": [
+                        "Frontend Maersk SaaS Projekt vedrørende at onboarde nye klienter",
+                        "Frontend Maersk SaaS Projekt vedrørende et data søgnings værktøj",
+                        "Full Stack Maersk SaaS Projekt vedrørende et værktøj til Landside temaet"
+                    ],
+                    "year": "2022"
+                },
+                {
+                    "title": "TECH OFFICER | CLINIGMA",
+                    "points": [
+                        "Udvikling af clinigma portalen ",
+                        "Udvikling af en video app til patienter (ikke gjort færdig)",
+                        "Onboarding af nye medarbejdere og hjælp til at komme ind i kodebasen for praktikanter"
+                    ],
+                    "year": "2020"
+                },
+                {
+                    "title": "UDDANNELSE | WEB DEVELOPER",
+                    "points": [
+                        "Grundlæggende udvikling med framewworks som React, Vue og Angular",
+                        "UI/UX design",
+                        "Backend udvikling med Node.js and SQL databases"
+                    ],
+                    "year": "2019"
+                },
+                {
+                    "title": "UDDANNELSE | MULTIMEDIA DESIGNER",
+                    "points": [
+                        "Software udvikling med HTML, CSS and JavaScript",
+                        "UI/UX design",
+                        "Software designmetoder og projekt styring"
+                    ],
+                    "year": "2017"
+                },
+                {
+                    "title": "LÆRER | GØRLEV IDRÆTSEFTERSKOLE",
+                    "points": [
+                        "Fysisk uddannelse",
+                        "Mentor for unge",
+                        "vedligehooldelse af skolens hjemmeside"
+                    ],
+                    "year": "2009"
+                }
+            ]
+        },
+        {
+            "section": "button",
+            "text": "Arbejd med mig"
+        },
+        {
+            "section": "portfolio",
+            "title": "Portfolio  - (work in progress)  "
+        },
+        {
+            "section": "footer",
+            "title": "Kontakt Mig",
+            "email": "steffen.haulund@gmail.com",
+            "address": "Nordsjælland, Danmark"
+        }
+    ]
+}

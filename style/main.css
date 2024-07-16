@@ -49,6 +49,16 @@ h2 {
     flex-direction: column;
     padding-bottom: 3rem;
 }
+
+.flags-container{
+    padding: 1rem 0 0;
+}
+
+.flag {
+    width: 20px;
+    margin-right: 5px;
+    height: auto;
+}
     
 .header span {
     display: block;
@@ -85,6 +95,7 @@ h2 {
 button {
     width: 200px;
     padding: 10px;
+    margin-bottom: 2rem;
     font-size: large;
     background-color: var(--background-color);
     border: var(--primary-color) solid 2px;

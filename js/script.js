@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     env.ROOT_PATH = "https://haulund.github.io/portfolio24/"
   } 
 
-  const text = await fetch(env.ROOT_PATH + "data/text.json")
+  let text = await fetch(env.ROOT_PATH + "data/text.json")
     .then((response) => response.json())
     .then((data) => {
       // Use the data here
@@ -49,11 +49,54 @@ window.addEventListener("DOMContentLoaded", async () => {
   const headerGrid = document.createElement("div");
   headerGrid.className = "header-grid";
   headerDiv.appendChild(headerGrid);
+  // flags for language
+  const flagsContainer = document.createElement("div");
+  const dkAnchor = document.createElement("a");
+  const ukAnchor = document.createElement("a");
+  const danishFlag = document.createElement("img");
+  const ukFlag = document.createElement("img");
+  danishFlag.src = env.ROOT_PATH + "img/danish-flag.png";
+  ukFlag.src = env.ROOT_PATH + "img/uk-flag.png";
+
+  flagsContainer.className = "flags-container";
+  danishFlag.className = "flag";
+  ukFlag.className = "flag";
+  
+  dkAnchor.href = "#";
+  dkAnchor.addEventListener("click", async () => {
+    try {
+      const data = await fetch(env.ROOT_PATH + "data/textDK.json")
+        .then((response) => response.json());
+      changeText(data) 
+      
+    } catch (error) {
+      console.error("Error:", error);
+    }
+
+  });
+  dkAnchor.appendChild(danishFlag);
+
+  ukAnchor.href = "#";
+  ukAnchor.addEventListener("click", async () => {
+    try {
+      const data = await fetch(env.ROOT_PATH + "data/text.json")
+        .then((response) => response.json());
+      changeText(data) 
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  });
+  ukAnchor.appendChild(ukFlag);
+
+  flagsContainer.appendChild(ukAnchor);
+  flagsContainer.appendChild(dkAnchor);
+  headerGrid.appendChild(flagsContainer);
 
   // section for h1, span and button
   const headerSection = document.createElement("section");
   headerSection.className = "header-section";
   headerGrid.appendChild(headerSection);
+
 
   // ad h1 to header section
   const h1 = document.createElement("h1");
@@ -63,12 +106,14 @@ window.addEventListener("DOMContentLoaded", async () => {
   // add span to header section
   const span = document.createElement("span");
   span.className = "sub-title";
+  span.id = "sub-title";
   span.textContent = text.section[0].job;
   headerSection.appendChild(span);
 
   // add button to header section
   const button = document.createElement("button");
   button.className = "btn";
+  button.id = "btn";
   button.textContent = text.section[3].text;
   button.addEventListener("click", () => {
     window.location.href = "mailto:steffen.haulund@gmail.com";
@@ -83,11 +128,13 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   // add about me text to header section
   const h2 = document.createElement("h2");
+  h2.id = "about-me-header";
   h2.textContent = text.section[0].aboutMe;
   headerDiv.appendChild(h2);
 
   // add paragraff
   const p = document.createElement("p");
+  p.id = "about-me";
   p.textContent = text.section[0].aboutMeText;
   headerDiv.appendChild(p);
 
@@ -185,6 +232,24 @@ window.addEventListener("DOMContentLoaded", async () => {
   // ------------------
   // Utility
   // ------------------
+
+  // function to change text
+  function changeText(data) {
+    // change text in header section
+    document.getElementById('sub-title').innerText = data.section[0].job;
+    document.getElementById('btn').innerText = data.section[3].text;
+    document.getElementById('about-me').innerText = data.section[0].aboutMeText;
+    document.getElementById('about-me-header').innerText = data.section[0].aboutMe;
+    // reset text in CV section
+    cvContainer.innerHTML = "";
+    // populatetext in CV section
+    data.section[2].posts.forEach((element) => {
+      cvContainer.appendChild(createCvRow(element.year, element.points, element.title));
+    });
+    //change text in footer section
+    document.querySelector('.footer-header').innerHTML = data.section[5].title;
+    document.querySelector('.footer-pill:nth-child(2)').innerHTML = data.section[5].address;
+  }
 
   // utility function for creating a row in the CV section
   function createCvRow(year, postArray, title) {
